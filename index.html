@@ -1,99 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="birthdays/css/birthday1.css">
-    <link rel="stylesheet" href="CSS/styles.css">
-
-    <script src="birthdays/js/birthday2.js"></script>
-    <script src="birthdays/js/birthday1.js"></script>
-    <title>葡叶酱的温暖小窝 - 首页</title>
-    <link rel="icon" type="image/x-icon" href="images/tuanzi/团子 (1).ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>SereneShellback's Blog</title>
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </head>
-
-
 <body>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Ukenn2112/UkennWeb@3.0/index/web.js"></script>
-<script  color="255,182,193" opacity='1' zIndex="-1" count="100" src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js" type="text/javascript"></script>
-
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Ukenn2112/UkennWeb@3.0/index/web.js"></script>-->
+<!--<script  color="255,182,193" opacity='1' zIndex="-1" count="100" src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js" type="text/javascript"></script>-->
 
 
 <header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="葡叶酱的温暖小窝 Logo">
-        </a>
-        <h1>欢迎来到葡叶酱的温暖小窝</h1>
+  <div class="logo">
+    <a href="https://sereneshellback.github.io">
+      <img src="images/logo.jpg" alt="SereneShellback">
+    </a>
+    <h1>SereneShellback's Blog</h1>
+  </div>
+  <!-- 添加按钮 -->
+  <button class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="navbar">
+    <a href="https://sereneshellback.github.io">首页</a>
+    <a href="https://sereneshellback.github.io/puyejiang/">葡叶酱</a>
+    <a href="about.html">关于我们</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+  <!-- 新增一个用于显示导航栏的弹窗 -->
+  <div id="nav-popup" class="nav-popup hidden">
+    <div class="popup-content">
+      <a href="https://sereneshellback.github.io">首页</a>
+      <a href="https://sereneshellback.github.io/puyejiang/">葡叶酱</a>
+      <a href="about.html">关于我们</a>
+      <a href="contact.html">联系我们</a>
     </div>
-    <!-- 添加按钮 -->
-    <button class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <nav id="navbar">
-        <a href="index.html">首页</a>
-        <a href="pujia.html">葡家介绍</a>
-        <a href="about.html">关于我们</a>
-        <a href="contact.html">联系我们</a>
-    </nav>
-    <!-- 新增一个用于显示导航栏的弹窗 -->
-    <div id="nav-popup" class="nav-popup hidden">
-        <div class="popup-content">
-            <a href="index.html">首页</a>
-            <a href="pujia.html">葡家介绍</a>
-            <a href="about.html">关于我们</a>
-            <a href="contact.html">联系我们</a>
-        </div>
-    </div>
+  </div>
 
-    <script>
+  <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
-    const navPopup = document.getElementById('nav-popup');
-    navPopup.classList.toggle('hidden');
-    navPopup.classList.toggle('show');
-});
+      const navPopup = document.getElementById('nav-popup');
+      navPopup.classList.toggle('hidden');
+      navPopup.classList.toggle('show');
+    });
 
-</script>
+  </script>
 
 </header>
 
 
 
-
 <main>
-    <section>
-        <h2>生日提醒</h2>
-        <hr/>
-        <div id="birthday-list"></div>
-    </section>
-    <section>
-        <h2>葡叶酱照片展示</h2>
-        <p>有没有喜欢上葡叶酱呢？</p>
-        <img src="images/2017-01-25-885266 .jpg" alt="葡叶酱照片展示">
-        <img src="images/24-9月-30-03-03-18-23.png" alt="葡叶酱照片展示">
-    </section>
+  <section id="">
 
-    <section>
-        <h2>B站链接</h2>
-        <a href="https://b23.tv/jb0OPXA" target="_blank">葡叶酱的B站主页</a>
 
-        <h2>QQ交流群</h2>
-        <div class="qrLinkContainer">
-            <span tabindex="0" id="showQrCode">显示QQ群二维码</span>
-            <div id="qrCodeContainer">
-                <img src="images/QQ-group-QR-code.jpg" alt="QQ群二维码">
-            </div>
-        </div>
-    </section>
+
+
+  </section>
 </main>
 
+
+
 <footer>
-    <p>版权所有 © 2024 葡家有限公司</p>
+  <p>版权所有 © 2024 By SereneShellback</p>
 </footer>
 
 </body>

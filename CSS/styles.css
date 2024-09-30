@@ -1,0 +1,259 @@
+/* 页面头部样式 */
+header {
+  display: flex;          /* 使用弹性布局 */
+  justify-content: center; /* 内容水平方向居中 */
+  align-items: center;    /* 内容垂直居中对齐 */
+  padding: 10px;          /* 内边距为20像素 */
+  background-color: #ffba55; /* 背景颜色 */
+  position: fixed;        /* 固定定位 */
+  top: 0;                 /* 距离顶部距离 */
+  width: 100%;            /* 宽度设置为100%，以填充整个视口宽度 */
+  height: 60px;
+  z-index: 1000;          /* 设置较高的z-index值以确保覆盖其他元素 */
+}
+
+
+/* 创建一个内部容器 */
+header .container {
+  display: flex;          /* 使用弹性布局 */
+  justify-content: space-between; /* 内容水平方向两端对齐 */
+  align-items: center;    /* 内容垂直居中对齐 */
+  max-width: 960px;       /* 最大宽度为960px */
+  width: 100%;            /* 自适应宽度 */
+  margin: 0 auto;         /* 水平居中 */
+}
+
+/* logo 容器样式 */
+.logo {
+  display: flex;          /* 使用弹性布局 */
+  align-items: center;    /* 垂直居中对齐 */
+  gap: 10px;              /* 子元素之间间距 */
+}
+
+/* logo 图片样式 */
+.logo img {
+  width: 40px;            /* 图片宽度 */
+  height: 40px;           /* 图片高度 */
+}
+
+/* logo 文本样式 */
+.logo h1 {
+  margin: 0;              /* 移除默认外边距 */
+  font-size: 1.5em;       /* 相对于body的字体大小 */
+}
+
+/* 新增的按钮样式 */
+.menu-toggle {
+  display: none;          /* 默认不显示 */
+  background: transparent; /* 透明背景 */
+  border: none;           /* 无边框 */
+  cursor: pointer;        /* 鼠标指针变为手形 */
+  flex-direction: column; /* 子元素垂直排列 */
+  justify-content: space-around; /* 子元素之间平均分配空间 */
+  width: 20px;            /* 按钮宽度 */
+  height: 15px;           /* 按钮高度 */
+}
+
+.menu-toggle span {
+  display: block;         /* 块级元素 */
+  width: 100%;            /* 宽度100% */
+  height: 2px;            /* 高度2像素 */
+  background: white;      /* 白色背景 */
+}
+
+/* 导航栏样式 */
+nav {
+  display: flex;          /* 使用弹性布局 */
+  gap: 10px;              /* 子元素之间间距 */
+}
+
+/* 导航栏内的链接样式 */
+nav a {
+  margin: 0 16px;        /* 外边距 */
+  text-decoration: none; /* 移除下划线 */
+  color: #007bff;        /* 链接颜色 */
+  font-size: 1em;        /* 相对于body的字体大小 */
+}
+
+/* 导航栏内的链接悬停效果 */
+nav a:hover {
+  text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+/* 弹窗样式 */
+.nav-popup {
+  position: absolute;     /* 绝对定位 */
+  top: 100%;              /* 顶部距离 */
+  left: 0;                /* 左侧距离 */
+  right: 0;               /* 右侧距离 */
+  background-color: #ffba55; /* 背景颜色 */
+  padding: 20px;          /* 内边距 */
+  display: flex;          /* 使用弹性布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  gap: 10px;              /* 子元素之间间距 */
+  z-index: 999;           /* 层叠顺序 */
+  transform: translateY(-100%); /* 初始位置在上方 */
+  transition: transform 0.5s ease-in-out; /* 平滑过渡效果 */
+}
+
+.popup-content {
+  display: flex;          /* 使用弹性布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  gap: 10px;              /* 子元素之间间距 */
+  align-items: center;    /* 子元素居中对齐 */
+}
+
+.popup-content a {
+  text-decoration: none;  /* 移除下划线 */
+  color: #007bff;         /* 链接颜色 */
+  font-size: 1em;         /* 相对于body的字体大小 */
+}
+
+.popup-content a:hover {
+  text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+/* 隐藏弹窗 */
+.hidden {
+  display: none;          /* 隐藏元素 */
+}
+
+/* 显示弹窗 */
+.show {
+  transform: translateY(0); /* 拉出到当前位置 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .menu-toggle {          /* 在窄屏设备上显示按钮 */
+    display: flex;
+  }
+  nav {                   /* 默认隐藏导航栏 */
+    display: none;
+  }
+}
+
+body {
+  background-color: #fff5d6; /* 淡黄色背景 */
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* 全局光标样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("../images/Mouse_cursor/SummerPockets.png"), url("../images/Mouse_cursor/SummerPockets.cur"), default;
+}
+
+
+
+/* 主要内容区域样式 */
+main {
+  max-width: 960px;         /* 最大宽度 */
+  margin: 0 auto;           /* 自动居中 */
+  padding-top: 80px;            /* 内边距 */
+  background-color: transparent;  /* 背景颜色设为透明 */
+}
+
+/* 内容区块样式 */
+section {
+  background-color: #f4f4f4; /* 背景颜色 */
+  padding: 20px;              /* 内边距 */
+  border-radius: 10px;        /* 圆角 */
+  margin-bottom: 20px;        /* 下方外边距 */
+}
+
+/* 标题样式 */
+h2 {
+  font-size: 1.5em;           /* 相对于body的字体大小 */
+  color: #4a4a4a;             /* 文字颜色 */
+  margin-bottom: 10px;        /* 下方外边距 */
+}
+
+/* 子标题样式 */
+h3 {
+  font-size: 1.125em;         /* 相对于body的字体大小 */
+  color: #777;                /* 文字颜色 */
+  margin-top: 20px;           /* 上方外边距 */
+  margin-bottom: 5px;         /* 下方外边距 */
+}
+
+/* 分割线样式 */
+hr {
+  border: none;              /* 无边框 */
+  height: 1px;               /* 高度 */
+  background-color: #ccc;    /* 背景颜色 */
+  margin: 15px 0;            /* 上下方外边距 */
+}
+
+/* 段落样式 */
+p {
+  font-size: 1em;            /* 相对于body的字体大小 */
+  margin: 0 0 10px;          /* 上下外边距 */
+}
+
+/* 图片样式 */
+img {
+  width: 100%;               /* 宽度自适应 */
+  max-width: 400px;          /* 最大宽度限制 */
+  display: block;            /* 块级元素显示 */
+  margin: 20px auto;         /* 上下外边距，水平居中 */
+}
+
+/* 链接样式 */
+a {
+  color: #007bff;            /* 文字颜色 */
+  text-decoration: none;     /* 移除下划线 */
+  font-size: 1em;            /* 添加字体大小，默认为相对于body的大小 */
+}
+
+/* 链接悬停效果 */
+a:hover {
+  text-decoration: underline; /* 悬停时添加下划线 */
+}
+
+/* 页脚样式 */
+footer {
+  text-align: center;        /* 居中对齐 */
+  padding: 20px;             /* 内边距 */
+  background-color: rgba(255, 255, 255, 0.7); /* 半透明背景色 */
+  margin-top: 20px;          /* 上方外边距 */
+  font-size: 0.8em;          /* 页脚字体大小设置为body的0.8倍 */
+}
+
+/* 二维码容器样式 */
+#qrCodeContainer {
+  display: none;             /* 默认不显示 */
+  position: absolute;        /* 绝对定位 */
+  top: 65%;                 /* 距离顶部100% */
+  left: 50%;                 /* 距离左边50% */
+  transform: translateX(-50%); /* 水平居中 */
+  background-color: white;   /* 背景颜色 */
+  border: 1px solid #ccc;    /* 边框 */
+  padding: 10px;             /* 内边距 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  z-index: 1;                /* 层叠顺序 */
+}
+
+/* 二维码容器显示条件 */
+.qrLinkContainer span:focus + #qrCodeContainer,
+.qrLinkContainer span:hover + #qrCodeContainer {
+  display: block;            /* 显示容器 */
+}
+
+/* 二维码链接容器内的span标签样式 */
+span {
+  text-decoration: none;     /* 移除下划线 */
+  color: blue;               /* 文字颜色 */
+  cursor: pointer;           /* 鼠标指针变为手形 */
+  outline: none;             /* 无轮廓 */
+  font-size: 1em;            /* 设置字体大小 */
+}
+
+/* 二维码容器在body激活时隐藏 */
+body:active #qrCodeContainer {
+  display: none;             /* 不显示 */
+}
