@@ -1,0 +1,12 @@
+[
+    {
+        "title": "文章1",
+        "summary": "这是文章1的摘要。",
+        "link": "http://example.com/article1"
+    },
+    {
+        "title": "文章2",
+        "summary": "这是文章2的摘要。",
+        "link": "http://example.com/article2"
+    }
+]

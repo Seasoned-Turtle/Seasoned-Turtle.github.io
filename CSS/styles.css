@@ -1,3 +1,7 @@
+body {
+  background-color: #fff5d6; /* 淡黄色背景 */
+  font-family: Arial, sans-serif;
+}
 /* 页面头部样式 */
 header {
   display: flex;          /* 使用弹性布局 */
@@ -133,11 +137,6 @@ nav a:hover {
   }
 }
 
-body {
-  background-color: #fff5d6; /* 淡黄色背景 */
-  font-family: Arial, sans-serif;
-}
-
 
 
 /* 全局光标样式 */
@@ -147,6 +146,7 @@ body {
   box-sizing: border-box;
   cursor: url("../images/Mouse_cursor/SummerPockets.png"), url("../images/Mouse_cursor/SummerPockets.cur"), default;
 }
+
 
 
 
@@ -165,6 +165,21 @@ section {
   border-radius: 10px;        /* 圆角 */
   margin-bottom: 20px;        /* 下方外边距 */
 }
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
 
 /* 标题样式 */
 h2 {
