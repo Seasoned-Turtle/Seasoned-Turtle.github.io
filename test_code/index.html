@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>葡叶酱的温暖小窝 - 首页</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="resource/images/tuan-zi/团子 (1).ico">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="birthdays/css/birthday1.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+
+  <!-- JavaScript Files -->
+  <script src="js/script.js" defer></script>
+  <script src="birthdays/js/birthday2.js" defer></script>
+  <script src="birthdays/js/birthday1.js" defer></script>
+
+  <!-- External Scripts -->
+  <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js" defer></script>
+</head>
+<body>
+<!-- Header Section -->
+<header class="header">
+  <div class="container">
+    <div class="logo-container">
+    <img src="./resource/images/logo.png" alt="葡叶酱的温暖小窝 Logo">
+    <span class="web-name">欢迎来到葡叶酱的温暖小窝</span>
+    </div>
+
+  <!-- Menu Toggle Button -->
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links" id="nav-links">
+    <a href="https://seasoned-turtle.github.io">憨龟总站</a>
+    <a href="./">首页</a>
+    <a href="./pujia/">葡家介绍</a>
+    <a href="./about/">关于我们</a>
+    <a href="./contact/">联系我们</a>
+  </nav>
+  </div>
+
+  <!-- Navigation Toggle Script -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      const navPopup = document.getElementById('nav-popup');
+      navPopup.classList.toggle('hidden');
+      navPopup.classList.toggle('show');
+    });
+  </script>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Countdown Section -->
+  <section>
+    <h2 style="font-size: 24px; font-family: Arial, sans-serif; color: #333; text-align: center;">
+      四季键子建群二周年
+    </h2>
+    <hr />
+    <h1 style="font-size: 36px; font-family: Arial, sans-serif; color: #333; text-align: center;">
+      距离建群二周年还有
+    </h1>
+    <div id="countdown" style="font-size: 48px; font-family: Arial, sans-serif; color: #333; text-align: center;"></div>
+    <script src="dao_ji_shi/countdown.js" defer></script>
+  </section>
+
+  <!-- Birthday Reminder Section -->
+  <section>
+    <h2>生日提醒</h2>
+    <hr />
+    <div id="birthday-list"></div>
+  </section>
+
+  <!-- Photo Display Section -->
+  <section>
+    <h2>葡叶酱照片展示</h2>
+    <p>有没有喜欢上葡叶酱呢？</p>
+    <img src="resource/images/2017-01-25-885266 .jpg" alt="葡叶酱照片展示">
+    <img src="resource/images/24-9月-30-03-03-18-23.png" alt="葡叶酱照片展示">
+  </section>
+
+  <!-- Links Section -->
+  <section>
+    <h2>B站链接</h2>
+    <a href="https://b23.tv/jb0OPXA" target="_blank">葡叶酱的B站主页</a>
+
+    <h2>QQ交流群</h2>
+    <div class="qrLinkContainer">
+      <span id="showQrCode" tabindex="0">显示QQ群二维码</span>
+      <div id="qrCodeContainer">
+        <img src="resource/images/QQ-group-QR-code.jpg" alt="QQ群二维码">
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+  <p>版权所有 © 2024 葡家有限公司</p>
+</footer>
+</body>
+</html>
