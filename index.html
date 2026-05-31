@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>SeasonedTurtle's Blog</title>
-  <link rel="icon" type="image/x-icon" href="resource/images/icon.png">
+
+  <link rel="icon" type="image/x-icon" href="Resources/images/icon.png">
+  <link rel="apple-touch-icon" href="Resources/images/logo.jpg">
+
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="birthdays/css/birthday1.css">
   <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/birthday.css">
+
 
   <!-- JavaScript Files -->
-  <script src="js/script.js" defer></script>
-  <script src="birthdays/js/birthday2.js" defer></script>
-  <script src="birthdays/js/birthday1.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="JS/script.js" defer></script>
+  <script src="JS/Countdown.js" defer></script>
+  <script src="JS/birthday.js" defer></script>
+
 
   <!-- External Scripts -->
   <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js" defer></script>
@@ -28,55 +32,50 @@
 <header class="header">
   <div class="container">
     <div class="logo-container">
-      <img src="./resource/images/logo.jpg" alt="SeasonedTurtle's Logo">
+      <img src="Resources/images/logo.jpg" alt="SeasonedTurtle's Logo" loading="lazy">
       <span class="web-name">SeasonedTurtle's Blog</span>
     </div>
 
     <!-- Menu Toggle Button -->
-    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单">☰</button>
 
     <!-- Navigation Links -->
-    <nav class="nav-links" id="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="https://seasoned-turtle.github.io">首页</a>
-      <a href="https://seasoned-turtle.github.io/puyejiang/">葡叶酱</a>
-      <a href="./about/">关于我们</a>
-      <a href="./contact/">联系我们</a>
+      <a href="https://seasoned-turtle.github.io/GrapeLeafi/">葡叶酱</a>
+      <a href="about/">关于我们</a>
+      <a href="contact/">联系我们</a>
     </nav>
   </div>
-
-  <!-- Navigation Toggle Script -->
-  <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      const navPopup = document.getElementById('nav-popup');
-      navPopup.classList.toggle('hidden');
-      navPopup.classList.toggle('show');
-    });
-  </script>
 </header>
 
 
 
 <main>
-
+  <!-- 倒计时区块 -->
   <section>
-    <h2 style="font-size: 24px; font-family: Arial, sans-serif; color: #333;text-align: center;">
-      四季键子建群三周年
-    </h2>
-    <hr/>
-    <h1 style="font-size: 36px; font-family: Arial, sans-serif; color: #333;text-align: center;">距离建群三周年还有</h1>
-    <div id="countdown" style="font-size: 48px; font-family: Arial, sans-serif; color: #333; text-align: center;"></div>
-
-    <script src="dao_ji_shi/countdown.js"></script>
+    <h2>🍇 四季键子建群三周年</h2>
+    <div style="text-align: center;">
+      <p style="font-size: 1.2rem;">距离盛大庆典还有</p>
+      <div id="countdown">-- 天</div>
+    </div>
   </section>
 
-
+  <!-- 生日提醒区块 -->
+  <section>
+    <h2>🎂 角色生日提醒</h2>
+    <hr>
+    <div id="birthday-list">
+      <div class="birthday-item">✨ 加载中，请稍候...</div>
+    </div>
+  </section>
 </main>
 
 
 
 <footer>
-  <p>版权所有 © 2025 By SeasonedTurtle</p>
+  <p>版权所有 © 2026 By SeasonedTurtle</p>
 </footer>
-<script src="js/script.js"></script>
+
 </body>
 </html>
